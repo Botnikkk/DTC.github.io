@@ -4,71 +4,109 @@ body {
     padding: 0;
     display: flex;
     height: 100vh;
+    width: 100vw;
     justify-content: center;
     align-items: center;
     background-color: #f4f4f4;
 }
 
-.container {
+.container-login,.container-signup{
     display: flex;
-    width: 80%;
-    max-width: 1200px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    height: 35vw;
+    width: 30vw;
     background-color: #fff;
+    border-radius: 2vw;
+    box-shadow: 0 0 1vw .5vw rgba(0,0,0,0.3);
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transition: ease-in-out 1s;
+
 }
 
-.image-side {
-    width: 50%;
-    background-color: #f8f8f8;
+.container-login{
+    z-index: 2;
+}
+.container-signup{
+    z-index: 1;
+    transform: rotateY(180deg);
 }
 
-.image-side img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.form-side {
-    width: 50%;
-    padding: 40px;
-    box-sizing: border-box;
-}
-
-.form-container {
-    max-width: 300px;
-    margin: 0 auto;
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-label {
+.login-container, .signup-container{
+    width: 20vw;
+    aspect-ratio: 1;
     display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
 }
 
-input {
+.login-text, .signup-text{
+    display:block;
+    margin: 5vw;
+    font-size: 3vw;
+}
+
+.signup-text{
+    margin: 2.5vw;
+}
+
+.main-input {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
+    padding: .6vw;
+    margin-bottom: 1vw ;
     box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: .15vw solid #ccc;
+    border-radius: .5vw;
 }
 
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
+.lower-login{
+    display: flexbox;
+    flex-direction: row;
+}
+.forgot-password{
+    display: inline-flex;
+    cursor: pointer;
+}
+.remember-container{
+    width: 13vw;
+    display: inline-flex;
+    justify-content: end;
+    align-content: center;
+}
+.remember-text, .remember-me{
     cursor: pointer;
 }
 
-button:hover {
+
+.sumbit-button{
+    width: 100%;
+    padding: .6vw;
+    font-size: 1vw;
+    margin:  2vw 0 ;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 1vw;
+    cursor: pointer;
+}
+
+.sumbit-button:hover {
     background-color: #555;
 }
+
+.new-user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.new-user-text{
+    display: block;
+    font-size: 1vw;
+}
+.new-user-text span{
+    font-style: italic;
+    opacity: 0.7;
+    color: #555;
+    margin: .3vw;
+    cursor: pointer;
+}
+

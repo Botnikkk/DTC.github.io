@@ -7,42 +7,52 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="image-side">
-            <img src="file:///D:/dtc/1.png" alt="Delhi Transport Corporation">
+    <div class="container-login">
+        <div class="login-heading">
+            <span class="login-text">Log in</span>  
         </div>
-        <div class="form-side">
-            <div class="form-container">
-                <h2>Login</h2>
-                <form id="login-form" onsubmit="return handleLogin(event)">
-                    <label for="login-email">Email:</label>
-                    <input type="email" id="login-email" name="login-email" required>
-                    
-                    <label for="login-password">Password:</label>
-                    <input type="password" id="login-password" name="login-password" required>
-                    
-                    <button type="submit">Login</button>
-                </form>
+        <div class="login-container">
+            <form id="login-form" onsubmit="return handleLogin(event)">
 
-                <h2>Sign Up</h2>
-                <form id="signup-form" onsubmit="return handleSignup(event)">
-                    <label for="signup-name">Full Name:</label>
-                    <input type="text" id="signup-name" name="signup-name" required>
-                    
-                    <label for="signup-email">Email:</label>
-                    <input type="email" id="signup-email" name="signup-email" required>
-                    
-                    <label for="signup-password">Password:</label>
-                    <input type="password" id="signup-password" name="signup-password" required>
-                    
-                    <label for="signup-confirm-password">Confirm Password:</label>
-                    <input type="password" id="signup-confirm-password" name="signup-confirm-password" required>
-                    
-                    <button type="submit">Sign Up</button>
-                </form>
+                <input class="main-input" placeholder="Email address" type="email" id="login-email" name="login-email" required>
+                <input class="main-input" placeholder="Pasword" type="password" id="login-password" name="login-password" required> 
+                <div class="lower-login">
+                    <span class="forgot-password">Forgot password?</span>
+                    <div class="remember-container">
+                        <input class="remember-me" type="checkbox" id="remember-me" value="remember-me">
+                        <label class="remember-text" for="remember-me">Remember me</label>
+                    </div>
+                </div>      
+                <button button class="sumbit-button" type="submit">Login</button>
+            </form>
+            <div class="new-user">
+                <span class="new-user-text">Don't have an account?<span class="signUp">Sign Up</span></span>
+            </div>
+        </div>        
+    </div>
+    <div class="container-signup">
+        <div class="signup-heading">
+            <span class="signup-text">Sign Up</span>  
+        </div>
+        <div class="signup-container">
+            <form id="signup-form" onsubmit="return handleSignup(event)">
+                <input class="main-input"  placeholder="Name" type="text" id="signup-name" name="signup-name" required>
+                <input class="main-input" placeholder="Email address" type="email" id="signup-email" name="signup-email" required>
+                <select class="main-input" name="gender" id="gender" required>
+                    <option selected disabled>Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <input class="main-input" placeholder="Password" type="password" id="signup-password" name="signup-password" required>                
+                <input class="main-input" placeholder="Confirm password" type="password" id="signup-confirm-password" name="signup-confirm-password" required>
+                
+                <button class="sumbit-button" type="submit">Sign Up</button>
+            </form>
+            <div class="new-user">
+                <span class="new-user-text">Existing user?<span class="login">Login</span></span>
             </div>
         </div>
-    </div>
 
     <script src="scripts.js"></script>
 </body>
